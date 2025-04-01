@@ -1,11 +1,13 @@
 'use client';
 
 import React from 'react'
-import { StyledFeaturedJobsDiv } from './FeaturedJobs.Styled'
+import { StyledDivText, StyledFeaturedJobsDiv } from './FeaturedJobs.Styled'
 
 const FeaturedJobs = () => {
     return (
-        <StyledFeaturedJobsDiv></StyledFeaturedJobsDiv>
+        <StyledFeaturedJobsDiv>
+            <StyledDivText>Featured <span>jobs</span></StyledDivText>
+        </StyledFeaturedJobsDiv>
     )
 }
 
