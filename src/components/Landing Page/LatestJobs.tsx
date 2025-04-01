@@ -1,8 +1,11 @@
+'use client';
+
 import React from 'react'
+import { StyledLatestJobsDiv } from './LatestJobs.Styled'
 
 const LatestJobs = () => {
     return (
-        <div>LatestJobs</div>
+        <StyledLatestJobsDiv></StyledLatestJobsDiv>
     )
 }
 

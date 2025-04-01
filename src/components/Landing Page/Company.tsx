@@ -1,8 +1,11 @@
+'use client';
+
 import React from 'react'
+import { StyledCompanyDiv } from './Company.Styled'
 
 const Company = () => {
     return (
-        <div>Company</div>
+        <StyledCompanyDiv></StyledCompanyDiv>
     )
 }
 

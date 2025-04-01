@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const StyledLogoText = styled.h1`
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
     color:#25324B;
     font-weight: 700;
     font-family: 'Red Hat Display', sans-serif;
     padding-left: 10px;
     font-size: 24px;
-    letter-spacing: -1%;
     line-height: 150%;
     `;
 

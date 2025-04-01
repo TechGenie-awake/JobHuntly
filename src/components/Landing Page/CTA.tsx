@@ -1,8 +1,11 @@
+'use client';
+
 import React from 'react'
+import { StyledCTADiv } from './CTA.Styled'
 
 const CTA = () => {
     return (
-        <div>CTA</div>
+        <StyledCTADiv></StyledCTADiv>
     )
 }
 

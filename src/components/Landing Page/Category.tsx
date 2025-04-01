@@ -1,8 +1,11 @@
+'use client';
+
 import React from 'react'
+import { StyledCategoryDiv } from './Category.Styled'
 
 const Category = () => {
     return (
-        <div>Category</div>
+        <StyledCategoryDiv></StyledCategoryDiv>
     )
 }
 
