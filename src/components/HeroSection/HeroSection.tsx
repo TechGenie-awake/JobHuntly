@@ -1,6 +1,6 @@
 'use client';
 
-import { StyledAboutText, StyledDiv, StyledDivText, StyledHeroSection, StyledSearchDiv, StyledUnderline } from "./HeroSection.Styled";
+import { StyledAboutText, StyledDiv, StyledDivText, StyledHeroSection, StyledUnderline } from "./HeroSection.Styled";
 
 export default function HeroSection() {
     return (
