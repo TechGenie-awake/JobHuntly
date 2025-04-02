@@ -10,7 +10,7 @@ export default function HeroSection() {
             style={{ backgroundImage: `url(${HeroBackground.src})` }}
         >
             <div className="w-[500px] h-[237px] mx-[124px] pt-[156px]">
-                <h1 className="text-[70px] text-[#25324B] font-fahkwang font-bold">
+                <h1 className="text-[70px] text-[#25324B] font-fahkwang font-bold tracking-wide">
                     Discover more than <span className="text-[#26A4FF]">5000+ Jobs</span>
                 </h1>
                 <div
