@@ -1,7 +1,7 @@
 'use client';
 
-import React from 'react'
-import { StyledCategoryDiv, StyledDivText, StyledCard, StyledCardCategoryText, StyledCardJobsText, StyledCardsWrapper, StyledCardIcon, StyledArrowSpan } from './Category.Styled'
+import React from 'react';
+import ArrowRight from './Images/ArrowRight.png';
 
 const CardData = [
     { id: 0, Category: 'Design', Icon: '', Jobs: 235 },
@@ -11,33 +11,47 @@ const CardData = [
     { id: 4, Category: 'Technology', Icon: '', Jobs: 436 },
     { id: 5, Category: 'Engineering', Icon: '', Jobs: 542 },
     { id: 6, Category: 'Business', Icon: '', Jobs: 211 },
-    { id: 7, Category: 'Human Resource', Icon: '', Jobs: 346 }]
+    { id: 7, Category: 'Human Resource', Icon: '', Jobs: 346 }
+];
 
 function CategoryCard() {
     const Cards = CardData.map((card) => (
-        <StyledCard key={card.id}>
-            <StyledCardIcon>{card.Icon}</StyledCardIcon>
-            <StyledCardCategoryText>{card.Category}</StyledCardCategoryText>
-            <div className='flex items-center mr-10'>
-                <StyledCardJobsText>{card.Jobs} jobs available</StyledCardJobsText>
-                <StyledArrowSpan />
+        <div
+            key={card.id}
+            className="h-[214px] w-[274px] border border-[#D6DDEB] mt-[30px] p-[32px] hover:bg-[#4640DE] transition-colors duration-200 group" // Added 'group' class
+        >
+            <div className="h-[48px] w-[48px] bg-gray-400"></div>
+            <p className="text-[#25324B] font-fahkwang text-[24px] leading-[120%] font-semibold mt-[30px] mb-[-20px] group-hover:text-white"> {/* Added 'group-hover:text-white' */}
+                {card.Category}
+            </p>
+            <div className="flex items-center mr-6">
+                <p className="font-epilogue font-normal text-[18px] leading-[160%] tracking-[1px] text-[#7C8493] h-[26px] w-[364px] my-[30px] group-hover:text-white"> {/* Added 'group-hover:text-white' */}
+                    {card.Jobs} jobs available
+                </p>
+                <div
+                    className="h-[24px] w-[44px] bg-cover mt-[5px]"
+                    style={{ backgroundImage: `url(${ArrowRight.src})` }}
+                />
             </div>
-        </StyledCard>
-    ))
+        </div>
+    ));
 
     return (
-        <StyledCardsWrapper>{Cards}</StyledCardsWrapper>
-    )
+        <div className="flex flex-wrap justify-between">
+            {Cards}
+        </div>
+    );
 }
 
 const Category = () => {
-
     return (
-        <StyledCategoryDiv>
-            <StyledDivText>Explore by <span>category</span></StyledDivText>
+        <div className="h-[633px] w-full py-[72px] px-[124px]">
+            <h1 className="text-[70px] text-[#25324B] font-fahkwang font-bold">
+                Explore by <span className="text-[#26A4FF]">category</span>
+            </h1>
             <CategoryCard />
-        </StyledCategoryDiv>
-    )
+        </div>
+    );
 }
 
-export default Category
+export default Category;
