@@ -10,9 +10,7 @@ export const StyledCTADiv = styled.div`
 export const StyledCTAWrapper = styled.div`
     background-image: url(${CTABackground.src});
     background-size: cover;
-    width: 1192px;
-    height: 414px;
-    padding: 92px 70px;
+    padding: 92px 0 92px 70px;
     `;
 
 export const StyledTextWrapper = styled.div`
