@@ -18,6 +18,9 @@ export const StyledNavLink = styled.a`
     line-height: 160%;
     padding: 0 10px;
     text-decoration: none;
+    &:hover {
+        color: #4640DE;
+    }
     `;
 
 export const StyledLoginButton = styled.button`
@@ -25,6 +28,10 @@ export const StyledLoginButton = styled.button`
     width: 92px;
     border-radius: 4px;
     color: #4640DE;
+    &:hover {
+        background-color: #4640DE;
+        color: white;
+    }
     `;
 
 export const StyledSignUpButton = styled.button`
@@ -33,6 +40,10 @@ export const StyledSignUpButton = styled.button`
     border-radius: 4px;
     color: white;
     background-color: #4640DE;
+    &:hover {
+        background-color: white;
+        color: #4640DE;
+    }
     `;
 
 export const StyledLine = styled.div`

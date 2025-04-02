@@ -46,3 +46,9 @@ export const StyledAboutText = styled.p`
         width: 521px;
         margin-top: 30px;
     `;
+
+export const StyledSearchDiv = styled.div`
+    height: 89px;
+    width: 852px;
+    background-color: white;
+    `;

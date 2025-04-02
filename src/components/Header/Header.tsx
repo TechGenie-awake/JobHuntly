@@ -12,9 +12,10 @@ export default function Header() {
         <div className='flex items-center'>
           <Image src={logo} alt="Logo" width={32} height={32} className="object-contain" priority />
           <StyledLogoText>JobHuntly</StyledLogoText>
-
-          <StyledNavLink>Find Jobs</StyledNavLink>
-          <StyledNavLink>Browse Companies</StyledNavLink>
+          <div className='ml-15'>
+            <StyledNavLink>Find Jobs</StyledNavLink>
+            <StyledNavLink>Browse Companies</StyledNavLink>
+          </div>
         </div>
         <div className='flex items-center gap-4'>
           <StyledLoginButton>Login</StyledLoginButton>
