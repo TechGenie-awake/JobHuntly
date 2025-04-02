@@ -2,6 +2,7 @@
 
 import HeroBackground from './HeroBackground.png';
 import Underline from './Underline.png';
+import JobSearch from './SearchBar';
 
 export default function HeroSection() {
     return (
@@ -19,6 +20,10 @@ export default function HeroSection() {
                 ></div>
                 <p className="font-epilogue font-light text-[20px] leading-[160%] tracking-[1px] text-[#515B6F] mt-[30px] w-[521px]">
                     Great platform for the job seeker that searching for new career heights and passionate about startups.
+                </p>
+                <JobSearch />
+                <p className="font-epilogue font-light text-[16px] leading-[160%] text-[#202430] mt-[10px]">
+                    Popular : UI Designer, UX Researcher, Android, Admin
                 </p>
             </div>
         </section>
