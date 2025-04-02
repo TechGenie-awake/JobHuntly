@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import CTABackground from "./CTABackground.png"
+import CTABackground from "./Images/CTABackground.png"
 
 export const StyledCTADiv = styled.div`
     height: 558px;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ArrowRight from "./ArrowRight.png"
+import ArrowRight from "./Images/ArrowRight.png"
 
 export const StyledCategoryDiv = styled.div`
     height: 633px;
