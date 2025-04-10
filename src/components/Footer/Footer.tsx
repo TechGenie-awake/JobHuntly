@@ -3,6 +3,11 @@
 import React from 'react';
 import Image from 'next/image';
 import logo from '../Header/logo.png';
+import facebook from './icons/facebook.png';
+import twitter from './icons/twitter.png';
+import linkedin from './icons/linkedin.png';
+import github from './icons/github.png';
+import instagram from './icons/instagram.png';
 
 const AboutMenuItems = ["About", "Companies", "Pricing", "Terms", "Advice", "Privacy Policy"];
 const ResourcesMenuItems = ["Resources", "Help Docs", "Guide", "Updates", "Contact Us"];
@@ -12,12 +17,17 @@ function AboutMenu() {
         index === 0 ? (
             <li key={index} className="font-semibold text-white text-lg mb-4">{item}</li>
         ) : (
-            <li key={index} className="font-light text-[#D6DDEB] text-base mb-4">{item}</li>
+            <li key={index}>
+                <a
+                    href="#"
+                    className="block font-light text-[#D6DDEB] text-base mb-4 hover:text-white hover:scale-105 transition-all duration-200 ease-in-out"
+                >
+                    {item}
+                </a>
+            </li>
         )
     ));
-    return (
-        <ul>{AboutItems}</ul>
-    );
+    return <ul>{AboutItems}</ul>;
 }
 
 function ResourcesMenu() {
@@ -25,21 +35,26 @@ function ResourcesMenu() {
         index === 0 ? (
             <li key={index} className="font-semibold text-white text-lg mb-4">{item}</li>
         ) : (
-            <li key={index} className="font-light text-[#D6DDEB] text-base mb-4">{item}</li>
+            <li key={index}>
+                <a
+                    href="#"
+                    className="block font-light text-[#D6DDEB] text-base mb-4 hover:text-white hover:scale-105 transition-all duration-200 ease-in-out"
+                >
+                    {item}
+                </a>
+            </li>
         )
     ));
-    return (
-        <ul>{ResourcesItems}</ul>
-    );
+    return <ul>{ResourcesItems}</ul>;
 }
 
 const SocialIcons: React.FC = () => {
     const icons = [
-        { alt: '1' },
-        { alt: '2' },
-        { alt: '3' },
-        { alt: '4' },
-        { alt: '5' },
+        { alt: 'Facebook', src: facebook },
+        { alt: 'Twitter', src: twitter },
+        { alt: 'LinkedIn', src: linkedin },
+        { alt: 'Instagram', src: instagram },
+        { alt: 'GitHub', src: github },
     ];
 
     return (
@@ -48,17 +63,23 @@ const SocialIcons: React.FC = () => {
                 <a
                     href="#"
                     key={index}
-                    className="flex items-center justify-center w-8 h-8 rounded-full bg-gray-200 hover:bg-gray-300"
+                    className="flex items-center justify-center w-8 h-8 rounded-full hover:bg-gray-300 transition duration-200"
                 >
-                    <div className="w-full h-full rounded-full bg-gray-400 flex items-center justify-center">
-                        {/* Placeholder for icon */}
-                        <span className="text-white">{icon.alt}</span>
+                    <div className="w-full h-full rounded-full flex items-center justify-center">
+                        <Image
+                            src={icon.src}
+                            alt={icon.alt}
+                            width={40}
+                            height={40}
+                            className="object-contain"
+                        />
                     </div>
                 </a>
             ))}
         </div>
     );
 };
+
 
 const Footer = () => {
     return (
@@ -79,9 +100,15 @@ const Footer = () => {
                 </div>
                 <div className="w-[362px]">
                     <p className="font-semibold text-white text-lg mb-4">Get job notifications</p>
-                    <p className="font-light text-[#D6DDEB] text-base mb-4 tracking-wider w-[306px] ">The latest job news, articles, sent to your inbox weekly.</p>
+                    <p className="font-light text-[#D6DDEB] text-base mb-4 tracking-wider w-[306px] ">
+                        The latest job news, articles, sent to your inbox weekly.
+                    </p>
                     <div className='flex gap-2'>
-                        <input type="text" placeholder="Email Address" className="border-none outline-none px-2 py-2 placeholder-gray-400 w-[223px] h-[50px] bg-white" />
+                        <input
+                            type="text"
+                            placeholder="Email Address"
+                            className="border-none outline-none px-2 py-2 placeholder-gray-400 w-[223px] h-[50px] bg-white"
+                        />
                         <button className="bg-[#4640DE] border border-transparent text-[#FFFFFF] px-4 py-2 hover:bg-[#FFFFFF] hover:text-[#4640DE] hover:border-[#4640DE] transition duration-200 shadow-md w-[131px] h-[50px]">
                             Subscribe
                         </button>
