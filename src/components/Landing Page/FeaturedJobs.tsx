@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 
 const CardData = [
     {
@@ -101,45 +102,47 @@ function FeaturedJobsCards() {
     return (
         <div className="flex flex-wrap justify-between gap-y-[30px] mt-[30px]">
             {CardData.map((card) => (
-                <div
-                    key={card.id}
-                    className="h-[283px] w-[274px] border border-[#D6DDEB] p-[24px] transition-transform duration-300 hover:shadow-xl hover:border-[#4640DE] hover:scale-105 cursor-pointer"
-                >
-                    <div className='flex justify-between mb-6'>
-                        <div className="h-[48px] w-[48px] rounded-full bg-gray-100 flex items-center justify-center text-2xl">
-                            {card.icon}
+                <Link href="/jobs" key={card.id}>
+                    <div
+                        key={card.id}
+                        className="h-[283px] w-[274px] border border-[#D6DDEB] p-[24px] transition-transform duration-300 hover:shadow-xl hover:border-[#4640DE] hover:scale-105 cursor-pointer"
+                    >
+                        <div className='flex justify-between mb-6'>
+                            <div className="h-[48px] w-[48px] rounded-full bg-gray-100 flex items-center justify-center text-2xl">
+                                {card.icon}
+                            </div>
+                            <div className="w-[91px] h-[31px] border border-[#4640DE] text-[#4640DE] text-center flex items-center justify-center text-sm">
+                                Full Time
+                            </div>
                         </div>
-                        <div className="w-[91px] h-[31px] border border-[#4640DE] text-[#4640DE] text-center flex items-center justify-center text-sm">
-                            Full Time
-                        </div>
-                    </div>
-                    <p className="text-[#25324B] font-fahkwang text-[18px] leading-[160%] font-semibold">
-                        {card.role}
-                    </p>
-                    <div className='flex items-center space-x-2 mb-4'>
-                        <p className="font-epilogue text-[14px] text-[#515B6F]">
-                            {card.company}
+                        <p className="text-[#25324B] font-fahkwang text-[18px] leading-[160%] font-semibold">
+                            {card.role}
                         </p>
-                        <div className="w-[4px] h-[4px] rounded-full bg-[#515B6F]" />
-                        <p className="font-epilogue text-[14px] text-[#515B6F]">
-                            {card.location}
-                        </p>
-                    </div>
-                    <p className="font-epilogue text-[14px] text-[#7C8493]">
-                        {card.description}
-                    </p>
-                    <div className='flex flex-wrap'>
-                        {card.tags.map((tag, index) => (
-                            <p
-                                key={index}
-                                className={`font-epilogue text-[13px] rounded-[16px] px-[8px] py-[2px] text-center mr-[10px] mt-[10px] ${tagStyles[tag] || 'bg-gray-200 text-gray-700'}`}
-                            >
-                                {tag}
+                        <div className='flex items-center space-x-2 mb-4'>
+                            <p className="font-epilogue text-[14px] text-[#515B6F]">
+                                {card.company}
                             </p>
-                        ))}
+                            <div className="w-[4px] h-[4px] rounded-full bg-[#515B6F]" />
+                            <p className="font-epilogue text-[14px] text-[#515B6F]">
+                                {card.location}
+                            </p>
+                        </div>
+                        <p className="font-epilogue text-[14px] text-[#7C8493]">
+                            {card.description}
+                        </p>
+                        <div className='flex flex-wrap'>
+                            {card.tags.map((tag, index) => (
+                                <p
+                                    key={index}
+                                    className={`font-epilogue text-[13px] rounded-[16px] px-[8px] py-[2px] text-center mr-[10px] mt-[10px] ${tagStyles[tag] || 'bg-gray-200 text-gray-700'}`}
+                                >
+                                    {tag}
+                                </p>
+                            ))}
 
+                        </div>
                     </div>
-                </div>
+                </Link>
             ))}
         </div>
     );

@@ -8,7 +8,7 @@ const CTA = () => {
     const router = useRouter();
 
     const handleClick = () => {
-        router.push('/signup'); // Navigate to signup page
+        router.push('/login&signup'); // Navigate to signup page
     };
 
     return (

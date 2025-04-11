@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import LatestJobsBackground from './Images/LatestJobsBackground.png';
 import BufferCompanyIcon from './Images/BufferCompanyIcon.png';
@@ -95,50 +96,52 @@ function LatestJobsCards() {
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {CardData.map((card) => (
-                <div
-                    key={card.id}
-                    className="h-[149px] w-[580px] bg-white mb-[20px] p-[24px] flex rounded-xl shadow-md hover:shadow-xl transition-transform transform hover:-translate-y-1 duration-300"
-                >
-                    <div className='h-[64px] w-[64px] bg-white-200 mr-8 rounded-full overflow-hidden relative'>
-                        <Image
-                            src={card.icon.src}
-                            alt="icon"
-                            fill
-                            className="object-cover"
-                        />
-                    </div>
-
-                    <div>
-                        <p className="text-[#25324B] font-fahkwang text-[20px] leading-[120%] font-semibold">
-                            {card.role}
-                        </p>
-                        <div className='flex items-center mt-2 gap-2'>
-                            <p className="font-epilogue font-normal text-[16px] leading-[160%] text-[#515B6F]">
-                                {card.company}
-                            </p>
-                            <div className="w-[4px] h-[4px] rounded-full bg-[#515B6F] mt-[8px]"></div>
-                            <p className="font-epilogue font-normal text-[16px] leading-[160%] text-[#515B6F]">
-                                {card.location}
-                            </p>
+                <Link href="/jobs" key={card.id}>
+                    <div
+                        key={card.id}
+                        className="h-[149px] w-[580px] bg-white mb-[20px] p-[24px] flex rounded-xl shadow-md hover:shadow-xl transition-transform transform hover:-translate-y-1 duration-300"
+                    >
+                        <div className='h-[64px] w-[64px] bg-white-200 mr-8 rounded-full overflow-hidden relative'>
+                            <Image
+                                src={card.icon.src}
+                                alt="icon"
+                                fill
+                                className="object-cover"
+                            />
                         </div>
-                        <div className='flex items-center mt-2'>
-                            <p className="font-epilogue text-[14px] text-[#56CDAD] bg-[#56CDAD1A] rounded-[16px] px-[8px] py-[2px]">
-                                Full Time
+
+                        <div>
+                            <p className="text-[#25324B] font-fahkwang text-[20px] leading-[120%] font-semibold">
+                                {card.role}
                             </p>
-                            <div className="w-[1px] h-[34px] bg-[#D6DDEB] mx-2"></div>
-                            <div className='flex flex-wrap'>
-                                {card.tags.map((tag, index) => (
-                                    <p
-                                        key={index}
-                                        className={`font-epilogue text-[14px] rounded-[16px] px-[8px] py-[2px] text-center mr-[10px] mb-[4px] ${tagStyles[tag] || 'bg-gray-100 text-gray-600 border border-gray-300'}`}
-                                    >
-                                        {tag}
-                                    </p>
-                                ))}
+                            <div className='flex items-center mt-2 gap-2'>
+                                <p className="font-epilogue font-normal text-[16px] leading-[160%] text-[#515B6F]">
+                                    {card.company}
+                                </p>
+                                <div className="w-[4px] h-[4px] rounded-full bg-[#515B6F] mt-[8px]"></div>
+                                <p className="font-epilogue font-normal text-[16px] leading-[160%] text-[#515B6F]">
+                                    {card.location}
+                                </p>
+                            </div>
+                            <div className='flex items-center mt-2'>
+                                <p className="font-epilogue text-[14px] text-[#56CDAD] bg-[#56CDAD1A] rounded-[16px] px-[8px] py-[2px]">
+                                    Full Time
+                                </p>
+                                <div className="w-[1px] h-[34px] bg-[#D6DDEB] mx-2"></div>
+                                <div className='flex flex-wrap'>
+                                    {card.tags.map((tag, index) => (
+                                        <p
+                                            key={index}
+                                            className={`font-epilogue text-[14px] rounded-[16px] px-[8px] py-[2px] text-center mr-[10px] mb-[4px] ${tagStyles[tag] || 'bg-gray-100 text-gray-600 border border-gray-300'}`}
+                                        >
+                                            {tag}
+                                        </p>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </Link>
             ))}
         </div>
     );

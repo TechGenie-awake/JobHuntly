@@ -23,14 +23,14 @@ export default function Header() {
 
       <div className='flex items-center gap-4'>
         <button
-          onClick={() => router.push('/login')}
+          onClick={() => router.push('/login&signup')}
           className="h-[50px] w-[92px] rounded-[4px] text-[#4640DE] hover:bg-[#4640DE] hover:text-white transition-colors duration-300"
         >
           Login
         </button>
         <div className="w-[3px] h-[40px] bg-[#D6DDEB]"></div>
         <button
-          onClick={() => router.push('/signup')}
+          onClick={() => router.push('/login&signup')}
           className="h-[50px] w-[92px] rounded-[4px] text-white bg-[#4640DE] hover:bg-white hover:text-[#4640DE] transition-colors duration-300"
         >
           Sign Up

@@ -18,10 +18,7 @@ const CardData = [
 
 function CategoryCard() {
     const Cards = CardData.map((card) => (
-        <Link
-            key={card.id}
-            href={`/category/${card.Category.toLowerCase().replace(/\s+/g, '-')}`}
-        >
+        <Link key={card.id} href="/jobs">
             <div className="h-[214px] w-[274px] border border-[#D6DDEB] mt-[30px] p-[32px] hover:bg-[#4640DE] transition-colors duration-200 group cursor-pointer">
                 <div className="h-[48px] w-[48px] bg-gray-100 rounded-full flex items-center justify-center text-3xl">{card.Icon}</div>
                 <p className="text-[#25324B] font-fahkwang text-[24px] leading-[120%] font-semibold mt-[30px] mb-[-20px] group-hover:text-white">
